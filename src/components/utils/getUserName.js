@@ -1,7 +1,7 @@
 const PARAMETR = '--username=';
 
 export const getUserName = () => {
-  let username =
+  const username =
     process.argv
       .slice(2)
       .filter((param) => param.startsWith(PARAMETR))
