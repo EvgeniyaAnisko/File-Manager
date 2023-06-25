@@ -1,0 +1,21 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "This repository is the task RS School course NodeJS 2023 Q2 https://github.com/AlreadyBored/nodejs-assignments/blob/main/assignments/file-manager/assignment.md",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgeniyaAnisko/File-Manager.git"
+  },
+  "keywords": [
+    "nodejs",
+    "assignments",
+    "EvgeniyaAnisko"
+  ],
+  "author": "EvgeniyaAnisko",
+  "license": "ISC",
+  "homepage": "https://github.com/EvgeniyaAnisko/File-Manager#file-manager"
+}
