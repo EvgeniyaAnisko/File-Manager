@@ -1,3 +1,3 @@
 import { app } from './components/app/app.js';
 
-app();
+await app();
