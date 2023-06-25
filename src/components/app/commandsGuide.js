@@ -1,16 +1,17 @@
+import { list } from '../navigation/ls.js';
 import { os } from '../os/os.js';
 
 export const commandsGuide = {
   // 'up',
   // 'cd',
-  // 'ls',
+  'ls': async (args) => await list(args.path),
   // 'cat',
   // 'add',
   // 'rn',
   // 'cp',
   // 'mv',
   // 'rm',
-  'os': (arg) => os(arg),
+  'os': async (args) => await os(args.args),
   // 'hash',
   // 'compress',
   // 'decompress'

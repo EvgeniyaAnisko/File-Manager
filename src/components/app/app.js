@@ -16,19 +16,22 @@ const app = async () => {
     if (data.toString().trim() === '.exit') {
       process.exit();
     }
-
+    const currentPath = dirname(fileURLToPath(import.meta.url));
     const command = data.toString().trim().split(' ');
 
-    const argument = command.slice(1).join(' ');
+    const argument = {
+      args: command.slice(1).join(' '),
+      path: currentPath
+    };
     if (Object.hasOwn(commandsGuide, command[0])) {
-      Object.getOwnPropertyDescriptor(commandsGuide, command[0]).value(
+      await Object.getOwnPropertyDescriptor(commandsGuide, command[0]).value(
         argument
       );
     } else {
       console.error('Command is not found!');
     }
 
-    stdout.write(`${dirname(fileURLToPath(import.meta.url))} `);
+    stdout.write(`${currentPath} `);
   });
 
   process.on('SIGINT', () => process.exit());

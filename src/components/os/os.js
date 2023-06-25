@@ -2,10 +2,11 @@ import { osCatalog } from './catalog.js';
 
 const PREFIX = '--';
 
-export const os = (arg) => {
+export const os = async (arg) => {
   if (arg.startsWith(PREFIX)) {
     const argument = arg.substring(PREFIX.length);
-    console.log(Object.getOwnPropertyDescriptor(osCatalog, argument).value);
+    const value = await Object.getOwnPropertyDescriptor(osCatalog, argument).value;
+    console.log(value);
   } else {
     console.error('Invalid parameter command!');
   }
