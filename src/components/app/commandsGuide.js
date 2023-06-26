@@ -1,6 +1,7 @@
 import { add } from '../file/add.js';
 import { cat } from '../file/cat.js';
 import { rm } from '../file/rm.js';
+import { rn } from '../file/rn.js';
 import { calculateHash } from '../hash/hash.js';
 import { cd } from '../navigation/cd.js';
 import { list } from '../navigation/ls.js';
@@ -13,7 +14,7 @@ export const commandsGuide = {
   'ls': async (args) => await list(args.path),
   'cat': async (args) => await cat(args),
   'add': async (args) => await add(args),
-  // 'rn',
+  'rn': async (args) => await rn(args),
   // 'cp',
   // 'mv',
   'rm': async (args) => await rm(args),
