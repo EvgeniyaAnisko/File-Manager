@@ -1,3 +1,5 @@
+import { compress } from '../archiving/compress.js';
+import { decompress } from '../archiving/decompress.js';
 import { add } from '../file/add.js';
 import { cat } from '../file/cat.js';
 import { cp } from '../file/cp.js';
@@ -22,6 +24,6 @@ export const commandsGuide = {
   'rm': async (args) => await rm(args),
   'os': async (args) => await os(args.args),
   'hash': async (args) => await calculateHash(args),
-  // 'compress',
-  // 'decompress'
+  'compress': async (args) => await compress(args),
+  'decompress': async (args) => await decompress(args)
 };

@@ -16,7 +16,7 @@ export const cp = async (args) => {
     const readableStream = createReadStream(filePath);
     const writeStream = createWriteStream(newFilePath);
     readableStream.on('data', async (chunk) => writeStream.write(chunk));
-  } catch (err) {
+  } catch {
     console.error(ERROR_MESSAGE_OPERATION);
   }
 };
