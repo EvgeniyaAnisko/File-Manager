@@ -1,3 +1,4 @@
+import { ERROR_MESSAGE_INPUT } from '../utils/constant.js';
 import { osCatalog } from './catalog.js';
 
 const PREFIX = '--';
@@ -8,6 +9,6 @@ export const os = async (arg) => {
     const value = await Object.getOwnPropertyDescriptor(osCatalog, argument).value;
     console.log(value);
   } else {
-    console.error('Invalid parameter command!');
+    console.error(ERROR_MESSAGE_INPUT);
   }
 };

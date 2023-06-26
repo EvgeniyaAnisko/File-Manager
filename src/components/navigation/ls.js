@@ -1,4 +1,5 @@
 import { readdir } from 'fs/promises';
+import { ERROR_MESSAGE_OPERATION } from '../utils/constant.js';
 
 export const list = async (url) => {
   try {
@@ -28,6 +29,6 @@ export const list = async (url) => {
       console.table(sortTable, ['Name', 'Type']);
     });
   } catch {
-    console.error('Invalid command');
+    console.error(ERROR_MESSAGE_OPERATION);
   }
 };

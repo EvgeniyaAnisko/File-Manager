@@ -1,7 +1,8 @@
 import { stdin, stdout } from 'process';
+import os from 'os';
 import { getUserName } from '../utils/getUserName.js';
 import { commandsGuide } from './commandsGuide.js';
-import os from 'os';
+import { ERROR_MESSAGE_INPUT } from '../utils/constant.js';
 
 const app = async () => {
   const username = getUserName();
@@ -10,6 +11,7 @@ const app = async () => {
   stdout.write(
     `Welcome to the File Manager, ${username}!\n${currentPath} `
   );
+
   stdin.on('data', async (data) => {
     if (data.toString().trim() === '.exit') {
       process.exit();
@@ -27,7 +29,7 @@ const app = async () => {
       );
       currentPath = argument.path;
     } else {
-      console.error('Invalid input. Command is not found!');
+      console.error(ERROR_MESSAGE_INPUT);
     }
 
     stdout.write(`${currentPath} `);
