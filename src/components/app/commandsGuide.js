@@ -1,6 +1,7 @@
 import { add } from '../file/add.js';
 import { cat } from '../file/cat.js';
 import { rm } from '../file/rm.js';
+import { calculateHash } from '../hash/hash.js';
 import { cd } from '../navigation/cd.js';
 import { list } from '../navigation/ls.js';
 import { up } from '../navigation/up.js';
@@ -17,7 +18,7 @@ export const commandsGuide = {
   // 'mv',
   'rm': async (args) => await rm(args),
   'os': async (args) => await os(args.args),
-  // 'hash',
+  'hash': async (args) => await calculateHash(args),
   // 'compress',
   // 'decompress'
 };
