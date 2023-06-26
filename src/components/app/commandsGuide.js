@@ -1,8 +1,9 @@
 import { list } from '../navigation/ls.js';
+import { up } from '../navigation/up.js';
 import { os } from '../os/os.js';
 
 export const commandsGuide = {
-  // 'up',
+  'up': async (args) => await up(args),
   // 'cd',
   'ls': async (args) => await list(args.path),
   // 'cat',
