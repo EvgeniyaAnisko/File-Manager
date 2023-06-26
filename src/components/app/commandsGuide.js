@@ -1,4 +1,5 @@
 import { cat } from '../file/cat.js';
+import { rm } from '../file/rm.js';
 import { cd } from '../navigation/cd.js';
 import { list } from '../navigation/ls.js';
 import { up } from '../navigation/up.js';
@@ -13,7 +14,7 @@ export const commandsGuide = {
   // 'rn',
   // 'cp',
   // 'mv',
-  // 'rm',
+  'rm': async (args) => await rm(args),
   'os': async (args) => await os(args.args),
   // 'hash',
   // 'compress',
