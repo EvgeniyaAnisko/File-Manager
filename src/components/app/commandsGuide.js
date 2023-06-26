@@ -1,3 +1,4 @@
+import { add } from '../file/add.js';
 import { cat } from '../file/cat.js';
 import { rm } from '../file/rm.js';
 import { cd } from '../navigation/cd.js';
@@ -10,7 +11,7 @@ export const commandsGuide = {
   'cd': async (args) => await cd(args),
   'ls': async (args) => await list(args.path),
   'cat': async (args) => await cat(args),
-  // 'add',
+  'add': async (args) => await add(args),
   // 'rn',
   // 'cp',
   // 'mv',
